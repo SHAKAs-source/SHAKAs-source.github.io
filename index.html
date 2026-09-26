@@ -6,241 +6,292 @@
     <title>SHADRACK APOLLO - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* Base Page Styling - Deep Dark Slate */
+        /* Base Page Setup - Inspired by Modern UX Portfolios */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0f19;
-            color: #e2e8f0;
+            background-color: #0d1117;
+            color: #c9d1d9;
             line-height: 1.6;
-            padding: 60px 20px;
-            max-width: 760px;
+            padding: 40px 20px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Typography */
-        h1 {
-            font-size: 2.8rem;
+        /* Top Header Grid Layout */
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .logo-area h1 {
+            font-size: 1.8rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin-bottom: 8px;
+            margin: 0;
             color: #ffffff;
         }
 
+        .logo-area span {
+            font-size: 0.9rem;
+            color: #58a6ff;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .quick-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .quick-nav a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .quick-nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Hero Typography Accent */
+        .hero-intro {
+            font-size: 1.4rem;
+            color: #f0f6fc;
+            max-width: 650px;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+
+        /* Section Headings */
         h2 {
             font-size: 1.1rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: #38bdf8; /* Futuristic Neon Cyan Accent */
-            margin-top: 50px;
-            margin-bottom: 20px;
+            color: #8b949e;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 24px;
+        /* Three-Column Philosophy / Layout Elements */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        /* Divider Lines */
-        hr {
-            border: 0;
-            height: 1px;
-            background: #1e293b;
-            margin: 40px 0;
+        .philosophy-card {
+            background-color: #161b22;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
         }
 
-        /* Skills Lists */
-        .skills-container {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .skills-column {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .skills-column strong {
-            display: block;
-            font-size: 1.1rem;
+        .philosophy-card h3 {
+            margin-top: 0;
             margin-bottom: 12px;
+            font-size: 1.1rem;
             color: #ffffff;
         }
 
-        .skills-column ul {
+        .philosophy-card ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .skills-column li {
-            padding: 8px 0;
-            color: #94a3b8;
-            border-bottom: 1px solid #1e293b;
-            font-size: 1.05rem;
+        .philosophy-card li {
+            font-size: 0.95rem;
+            color: #8b949e;
+            padding: 4px 0;
         }
 
-        /* Projects Section Grid */
-        .projects-container {
+        /* Interactive UX Project Row Rows */
+        .project-row {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: #111827; /* Rich Dark Card Background */
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #161b22;
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid #1f2937;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            border: 1px solid #21262d;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
-        /* Project Card Hover Interactions with Neon Glow */
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
-            border-color: #38bdf8;
+        .project-row:hover {
+            transform: translateY(-2px);
+            border-color: #58a6ff;
+            box-shadow: 0 8px 24px rgba(88, 166, 255, 0.05);
         }
 
-        .project-card h3 {
+        .project-info {
+            max-width: 85%;
+        }
+
+        .project-info h3 {
             margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            color: #ffffff;
             font-weight: 700;
-            color: #ffffff;
         }
 
-        .project-card p {
-            margin-bottom: 0;
-            font-size: 1rem;
-            color: #94a3b8;
+        .project-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #8b949e;
         }
 
-        /* Contact Details */
-        .contact-info p {
-            margin: 12px 0;
-            font-size: 1.1rem;
-            color: #94a3b8;
+        .project-arrow {
+            font-size: 1.4rem;
+            color: #8b949e;
+            transition: transform 0.2s ease, color 0.2s ease;
+            align-self: center;
         }
 
-        .contact-info strong {
-            color: #ffffff;
+        .project-row:hover .project-arrow {
+            transform: translateX(4px);
+            color: #58a6ff;
         }
 
-        /* Social Media Link Buttons */
-        .social-links {
+        /* Contact Details & Buttons Footer */
+        .footer-contact {
+            margin-top: 60px;
+            padding-top: 20px;
+        }
+
+        .footer-links {
             display: flex;
             gap: 15px;
-            margin-top: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .social-btn {
+        .btn-outline {
             display: inline-flex;
             align-items: center;
-            padding: 12px 24px;
-            background-color: #111827;
-            color: #ffffff;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #c9d1d9;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 8px;
-            border: 1px solid #1f2937;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            border: 1px solid #30363d;
             transition: all 0.2s ease;
         }
 
-        .social-btn:hover {
-            background-color: #38bdf8;
-            color: #0b0f19;
-            border-color: #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-            transform: translateY(-1px);
+        .btn-outline:hover {
+            background-color: #ffffff;
+            color: #0d1117;
+            border-color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <!-- Heading Section -->
-    <header>
-        <h1>SHADRACK APOLLO</h1>
-        <p style="font-size: 1.3rem; color: #38bdf8; font-weight: 500; margin-top: 0; letter-spacing: -0.01em;">Aspiring Software Developer & AI Builder</p>
-    </header>
-
-    <hr>
-
-    <!-- About Me Section -->
-    <section>
-        <h2>About Me</h2>
-        <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p> 
-        <p>When I am not coding or experimenting with tech, you can usually find me gaming, animating movies, or diving into challenging puzzles. I am always excited to learn new skills, solve complex problems, and build creative projects that make an impact.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section>
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <div class="skills-column">
-                <strong>💻 Technical & Development</strong>
-                <ul>
-                    <li>Web App Development (HTML/CSS)</li>
-                    <li>Git & GitHub Hosting</li>
-                    <li>Logic & Algorithm Design</li>
-                </ul>
-            </div>
-            <div class="skills-column">
-                <strong>🎨 Creative & Gaming</strong>
-                <ul>
-                    <li>Movie Animation & Keyframing</li>
-                    <li>3D Modeling & Visual Storytelling</li>
-                    <li>Video Editing & Compositing</li>
-                    <li>UI/UX Layout Design</li>
-                </ul>
-            </div>
+    <!-- Top Navigation Header -->
+    <div class="nav-header">
+        <div class="logo-area">
+            <h1>SHADRACK APOLLO</h1>
+            <span>Portfolio Journal</span>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section>
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>🚀 Student Data Management System</h3>
-                <p>A simple web-based student data management system designed to organize student information in a clear and easy-to-use interface. I built the project to strengthen my understanding of HTML, CSS, JavaScript, data handling, and user interface design.</p>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>🎬 Cinematic Animation & Visual Storytelling</h3>
-                <p>A creative animation project exploring cinematic storytelling, character movement, visual effects, and scene composition. I experimented with AI-assisted animation and video editing tools to develop engaging short-form visual content while learning how different elements work together to create a complete scene.</p>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>🤖 AI & Robotics Concept Lab</h3>
-                <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
-            </div>
-
+        <div class="quick-nav">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </div>
-    </section>
+    </div>
 
-    <hr>
+    <!-- Hero Introduction Statement -->
+    <div class="hero-intro">
+        Hi, I'm an aspiring software developer, AI builder, web designer, and robotics enthusiast tracking a mission to design thoughtful, intelligent systems with a spark of creativity.
+    </div>
 
-    <!-- Contact Section -->
-    <section class="contact-info">
-        <h2>Contact Me</h2>
-        <p>📧 Email: <strong>shadrachlane@gmail.com</strong></p>
-        <p>📞 Phone: <strong>0755654041 / 0776834853</strong></p>
-
-        <!-- Social Media Buttons -->
-        <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" class="social-btn">🔗 LinkedIn Profile</a>
-            <a href="https://github.com" target="_blank" class="social-btn">🐙 GitHub Profile</a>
+    <!-- Core Philosophy / Skills Grid Section -->
+    <h2 id="skills">How I Build</h2>
+    <div class="philosophy-grid">
+        <div class="philosophy-card">
+            <h3>A Developer's Logic</h3>
+            <ul>
+                <li>Web App Construction</li>
+                <li>Logic Optimization</li>
+                <li>Algorithm Architecture</li>
+            </ul>
         </div>
-    </section>
+        <div class="philosophy-card">
+            <h3>An Artist's Layout</h3>
+            <ul>
+                <li>UI/UX Design Frameworks</li>
+                <li>Video & Motion Composition</li>
+                <li>3D Scene Modeling</li>
+            </ul>
+        </div>
+        <div class="philosophy-card">
+            <h3>A Modern Toolset</h3>
+            <ul>
+                <li>HTML5 & Custom CSS3</li>
+                <li>Git Version Controls</li>
+                <li>AI Integration Methods</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects Portfolio Stream -->
+    <h2 id="work">Selected Work</h2>
+    <div class="projects-container">
+        
+        <!-- Project Card 1 -->
+        <div class="project-row">
+            <div class="project-info">
+                <h3>Student Data Management System</h3>
+                <p>Designed a clean, functional student data indexing engine focused on data structures, structural input handling, and sleek screen rendering layouts built via JavaScript.</p>
+            </div>
+            <div class="project-arrow">➔</div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-row">
+            <div class="project-info">
+                <h3>Cinematic Animation Lab</h3>
+                <p>Explored character movement mechanics, frame timing scales, and digital assets inside AI-assisted media editors to output high-impact cinematic frames.</p>
+            </div>
+            <div class="project-arrow">➔</div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-row">
+            <div class="project-info">
+                <h3>AI & Robotics Concept Space</h3>
+                <p>Modeling intelligent machine routines and localized automation frameworks, joining smart algorithms together with conceptual edge hardware structures.</p>
+            </div>
+            <div class="project-arrow">➔</div>
+        </div>
+
+    </div>
+
+    <!-- Contact & External Channels Area -->
+    <h2 id="contact">Get in Touch</h2>
+    <div class="footer-contact">
+        <p style="margin: 0 0 10px 0;">📧 Email: <strong style="color: #ffffff;">shadrachlane@gmail.com</strong></p>
+        <p style="margin: 0 0 25px 0;">📞 Phone: <strong style="color: #ffffff;">0755654041 / 0776834853</strong></p>
+
+        <div class="footer-links">
+            <a href="https://linkedin.com" target="_blank" class="btn-outline">LinkedIn Connect</a>
+            <a href="https://github.com" target="_blank" class="btn-outline">GitHub Profile</a>
+        </div>
+    </div>
 
 </body>
 </html>
