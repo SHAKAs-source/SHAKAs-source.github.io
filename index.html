@@ -1,76 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHADRACK APOLLO - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Base Page Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #111111;
+            line-height: 1.6;
+            padding: 60px 20px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            color: #111111;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #333333;
+            margin-bottom: 24px;
+        }
+
+        /* Divider Lines */
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e5e5e5;
+            margin: 40px 0;
+        }
+
+        /* Skills Lists */
+        .skills-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .skills-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .skills-column strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #111111;
+        }
+
+        .skills-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-column li {
+            padding: 6px 0;
+            color: #444444;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.05rem;
+        }
+
+        /* Projects Section Grid */
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        /* Project Card Hover Interactions */
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+            border-color: #111111;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #111111;
+        }
+
+        .project-card p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #555555;
+        }
+
+        /* Contact Details */
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-info strong {
+            color: #111111;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; background-color: #f4f4f9; color: #333; padding: 40px; max-width: 800px; margin: 0 auto;">
+<body>
 
     <!-- Heading Section -->
-    <h1 style="color: #2f3542;">Hello, I'm SHADRACK APOLLO! 👋</h1>
-    <p style="font-size: 1.2em; color: #57606f;">Welcome to my digital portfolio.</p>
+    <header>
+        <h1>SHADRACK APOLLO</h1>
+        <p style="font-size: 1.3rem; color: #666666; font-weight: 400; margin-top: 0;">Aspiring Software Developer & AI Builder</p>
+    </header>
 
-    <hr style="border: 0; height: 1px; background: #ccc; margin: 30px 0;">
+    <hr>
 
     <!-- About Me Section -->
-    <h2>About Me</h2>
-    <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p> 
-    <p>When I am not coding or experimenting with tech, you can usually find me gaming, animating movies, or diving into challenging puzzles. I am always excited to learn new skills, solve complex problems, and build creative projects that make an impact.</p>
+    <section>
+        <h2>About Me</h2>
+        <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p> 
+        <p>When I am not coding or experimenting with tech, you can usually find me gaming, animating movies, or diving into challenging puzzles. I am always excited to learn new skills, solve complex problems, and build creative projects that make an impact.</p>
+    </section>
 
     <!-- Skills Section -->
-    <h2>My Skills</h2>
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 200px;">
-            <strong>💻 Technical & Development</strong>
-            <ul>
-                <li>Web App Development (HTML/CSS)</li>
-                <li>Git & GitHub Hosting</li>
-                <li>Logic & Algorithm Design</li>
-            </ul>
+    <section>
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skills-column">
+                <strong>💻 Technical & Development</strong>
+                <ul>
+                    <li>Web App Development (HTML/CSS)</li>
+                    <li>Git & GitHub Hosting</li>
+                    <li>Logic & Algorithm Design</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <strong>🎨 Creative & Gaming</strong>
+                <ul>
+                    <li>Movie Animation & Keyframing</li>
+                    <li>3D Modeling & Visual Storytelling</li>
+                    <li>Video Editing & Compositing</li>
+                    <li>UI/UX Layout Design</li>
+                </ul>
+            </div>
         </div>
-        <div style="flex: 1; min-width: 200px;">
-            <strong>🎨 Creative & Gaming</strong>
-            <ul>
-                <li>Movie Animation & Keyframing</li>
-                <li>3D Modeling & Visual Storytelling</li>
-                <li>Video Editing & Compositing</li>
-                <li>UI/UX Layout Design</li>
-            </ul>
-        </div>
-    </div>
-
-    <hr style="border: 0; height: 1px; background: #ccc; margin: 30px 0;">
+    </section>
 
     <!-- Projects Section -->
-    <h2>My Projects</h2>
-    <div style="display: flex; flex-direction: column; gap: 15px;">
-        
-        <!-- Project 1 -->
-        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2f3542;">
-            <h3 style="margin-top: 0; color: #2f3542;">🚀 Student Data Management System</h3>
-            <p style="margin-bottom: 0;">A simple web-based student data management system designed to organize student information in a clear and easy-to-use interface. I built the project to strengthen my understanding of HTML, CSS, JavaScript, data handling, and user interface design.</p>
+    <section>
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>🚀 Student Data Management System</h3>
+                <p>A simple web-based student data management system designed to organize student information in a clear and easy-to-use interface. I built the project to strengthen my understanding of HTML, CSS, JavaScript, data handling, and user interface design.</p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>🎬 Cinematic Animation & Visual Storytelling</h3>
+                <p>A creative animation project exploring cinematic storytelling, character movement, visual effects, and scene composition. I experimented with AI-assisted animation and video editing tools to develop engaging short-form visual content while learning how different elements work together to create a complete scene.</p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>🤖 AI & Robotics Concept Lab</h3>
+                <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
+            </div>
+
         </div>
+    </section>
 
-        <!-- Project 2 -->
-        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #ff4757;">
-            <h3 style="margin-top: 0; color: #ff4757;">🎬 Cinematic Animation & Visual Storytelling</h3>
-            <p style="margin-bottom: 0;">A creative animation project exploring cinematic storytelling, character movement, visual effects, and scene composition. I experimented with AI-assisted animation and video editing tools to develop engaging short-form visual content while learning how different elements work together to create a complete scene.</p>
-        </div>
-
-        <!-- Project 3 -->
-        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #2ed573;">
-            <h3 style="margin-top: 0; color: #2ed573;">🤖 AI & Robotics Concept Lab</h3>
-            <p style="margin-bottom: 0;">An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
-        </div>
-
-    </div>
-
-    <hr style="border: 0; height: 1px; background: #ccc; margin: 30px 0;">
+    <hr>
 
     <!-- Contact Section -->
-    <h2>Contact Me</h2>
-    <p>📧 Email: <strong>shadrachlane@gmail.com</strong></p>
-    <p>📞 Phone: <strong>0755654041 / 0776834853</strong></p>
+    <section class="contact-info">
+        <h2>Contact Me</h2>
+        <p>📧 Email: <strong>shadrachlane@gmail.com</strong></p>
+        <p>📞 Phone: <strong>0755654041 / 0776834853</strong></p>
+    </section>
 
 </body>
 </html>
