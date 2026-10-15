@@ -1,184 +1,192 @@
- <title>SHADRACK APOLLO - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        :root {
-            color-scheme: dark;
-            --page-background: #262626;
-            --surface-background: #323232;
-            --text-primary: #f2f2f2;
-            --text-secondary: #cccccc;
-            --text-muted: #b5b5b5;
-            --border-color: #4b4b4b;
-        }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHADRACK APOLLO - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    :root{
+      color-scheme: dark;
+      --page-background: #262626;
+      --surface-background: #323232;
+      --text-primary: #f2f2f2;
+      --text-secondary: #cccccc;
+      --text-muted: #b5b5b5;
+      --border-color: #4b4b4b;
+      --card-radius: 12px;
+    }
 
-        /* Base Page Styling */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fafafa;
-            color: #111111;
-            background-color: var(--page-background);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 60px 20px;
-            max-width: 760px;
-            height: 120px;
-            border-radius: 50%; /* Modern circular crop matching clean minimalist themes */
-            object-fit: cover;
-            border: 1px solid #e5e5e5;
-            object-position: center top;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+    /* Base page */
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--page-background);
+      color:var(--text-primary);
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin: 0 0 8px 0;
-            color: #111111;
-            color: var(--text-primary);
-        }
+    .container{
+      max-width:960px;
+      margin:48px auto;
+      padding:28px;
+    }
 
-        h2 {
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            text-transform: uppercase;
-            color: #666666;
-            color: var(--text-muted);
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:28px;
+    }
 
-        p {
-            font-size: 1.1rem;
-            color: #333333;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
+    .header-text h1{
+      margin:0;
+      font-size:1.6rem;
+      font-weight:800;
+      letter-spacing:-0.02em;
+      color:var(--text-primary);
+    }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: #e5e5e5;
-            background: var(--border-color);
-            margin: 40px 0;
-        }
+    .header-text p{
+      margin:6px 0 0 0;
+      color:var(--text-muted);
+      font-weight:400;
+      font-size:1rem;
+    }
 
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            color: #111111;
-            color: var(--text-primary);
-        }
+    .profile-area{
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
 
-        .skills-column ul {
+    .profile-pic{
+      width:96px;
+      height:96px;
+      object-fit:cover;
+      border-radius:12px;
+      border:1px solid var(--border-color);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+    }
 
-        .skills-column li {
-            padding: 6px 0;
-            color: #444444;
-            border-bottom: 1px solid #f0f0f0;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border-color);
-            font-size: 1.05rem;
-        }
+    hr{
+      border:0;
+      height:1px;
+      background:var(--border-color);
+      margin:28px 0;
+    }
 
-        }
+    .project-card{
+      background:var(--surface-background);
+      padding:20px;
+      border-radius:var(--card-radius);
+      border:1px solid var(--border-color);
+      box-shadow:0 6px 18px rgba(0,0,0,0.12);
+      transition:transform .15s ease, box-shadow .15s ease;
+      margin-bottom:18px;
+    }
 
-        .project-card {
-            background-color: #ffffff;
-            background-color: var(--surface-background);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e5e5e5;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
-            border-color: #111111;
-            border-color: var(--text-muted);
-        }
+    .project-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 28px rgba(0,0,0,0.18);
+    }
 
-        .project-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #111111;
-            color: var(--text-primary);
-        }
+    .project-card h3{
+      margin:0 0 8px 0;
+      font-size:1.15rem;
+      color:var(--text-primary);
+      font-weight:700;
+    }
 
-        .project-card p {
-            margin-bottom: 0;
-            font-size: 1rem;
-            color: #555555;
-            color: var(--text-secondary);
-        }
+    .project-card p{
+      margin:6px 0;
+      color:var(--text-secondary);
+      font-size:1rem;
+      line-height:1.5;
+    }
 
-        .project-card p + p {
-            margin-top: 12px;
-        }
+    .skills-column ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+    .skills-column li{
+      padding:6px 0;
+      color:var(--text-secondary);
+      border-bottom:1px solid var(--border-color);
+      font-size:1.03rem;
+    }
 
-        /* Contact Details */
-        }
+    .contact-info strong{ color:var(--text-primary); }
 
-        .contact-info strong {
-            color: #111111;
-            color: var(--text-primary);
-        }
+    .social-btn{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 14px;
+      background:var(--surface-background);
+      color:var(--text-primary);
+      text-decoration:none;
+      font-weight:600;
+      font-size:.95rem;
+      border-radius:8px;
+      border:1px solid var(--border-color);
+      transition:background-color .15s ease, color .15s ease;
+    }
+    .social-btn:hover{
+      background:var(--text-primary);
+      color:var(--page-background);
+      border-color:var(--text-primary);
+    }
 
-        /* Social Media Link Buttons */
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            color: #111111;
-            background-color: var(--surface-background);
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 8px;
-            border: 1px solid #e5e5e5;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            transition: background-color 0.2s ease, border-color 0.2s ease;
-        }
-
-        .social-btn:hover {
-            background-color: #111111;
-            color: #ffffff;
-            border-color: #111111;
-            background-color: var(--text-primary);
-            color: var(--page-background);
-            border-color: var(--text-primary);
-        }
-
-        .social-btn:focus-visible {
-            outline: 2px solid var(--text-primary);
-            outline-offset: 4px;
-        }
-    </style>
+    /* Responsive */
+    @media (max-width:640px){
+      header{ flex-direction:column; align-items:flex-start; gap:12px; }
+      .profile-pic{ width:72px; height:72px; }
+    }
+  </style>
 </head>
+<body>
+  <div class="container">
     <header>
-        <div class="header-text">
-            <h1>SHADRACK APOLLO</h1>
-            <p style="font-size: 1.3rem; color: #666666; font-weight: 400; margin-top: 0; margin-bottom: 0;">Aspiring Software Developer & AI Builder</p>
-            <p style="font-size: 1.3rem; color: var(--text-muted); font-weight: 400; margin-top: 0; margin-bottom: 0;">Aspiring Software Developer & AI Builder</p>
-        </div>
-        <div class="profile-area">
-            <img src="./image_LNOgl4.png" alt="Shadrack Apollo Portrait" class="profile-pic">
-            <img src="./assets/images/profile.jpg" alt="Shadrack Apollo Portrait" class="profile-pic" width="120" height="120">
-        </div>
+      <div class="header-text">
+        <h1>SHADRACK APOLLO</h1>
+        <p>Aspiring Software Developer & AI Builder</p>
+      </div>
+
+      <div class="profile-area" aria-hidden="false">
+        <img src="./image_LNOgl4.png" alt="Shadrack Apollo Portrait" class="profile-pic">
+        <img src="./assets/images/profile.jpg" alt="Shadrack Apollo Portrait" class="profile-pic" width="120" height="120">
+      </div>
     </header>
 
+    <main>
+      <section class="project-card" aria-labelledby="proj-1">
+        <h3 id="proj-1">🤖 AI & Robotics Concept Lab</h3>
+        <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can perform tasks and interact with the physical world. Projects range from simulation prototypes to embedded controllers.</p>
+      </section>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>🤖 AI & Robotics Concept Lab</h3>
-                <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
-                <h3>🤖 Data Enumeration</h3>
-                <p><strong>Digital &amp; Paper Data Entry:</strong> Record responses accurately using mobile data collection tools.</p>
-                <p><strong>Data Verification:</strong> Check that forms are complete, cross-verify inconsistent answers, and upload or submit data daily to supervisors.</p>
-            </div>
+      <section class="project-card" aria-labelledby="proj-2">
+        <h3 id="proj-2">📊 Data Enumeration</h3>
+        <p><strong>Digital &amp; Paper Data Entry:</strong> Record responses accurately using mobile data collection tools.</p>
+        <p><strong>Data Verification:</strong> Check that forms are complete, cross-verify inconsistent answers, and upload or submit data daily to supervisors.</p>
+      </section>
 
-        </div>
+      <hr>
+
+      <section class="project-card" aria-labelledby="contact">
+        <h3 id="contact">Contact & Social</h3>
+        <p class="contact-info"><strong>Email:</strong> youremail@example.com</p>
+        <p>
+          <a class="social-btn" href="#" rel="noopener">GitHub</a>
+          <a class="social-btn" href="#" rel="noopener">LinkedIn</a>
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
