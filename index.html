@@ -17,15 +17,41 @@
             margin: 0 auto;
         }
 
+        /* Profile Layout Structure */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap-reverse;
+        }
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .profile-img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #111111;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         /* Typography */
         h1 {
             font-size: 2.8rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin-bottom: 8px;
+            margin: 0 0 8px 0;
             color: #111111;
         }
-
         h2 {
             font-size: 1.4rem;
             font-weight: 700;
@@ -35,7 +61,6 @@
             margin-top: 50px;
             margin-bottom: 20px;
         }
-
         p {
             font-size: 1.1rem;
             color: #333333;
@@ -56,25 +81,21 @@
             gap: 40px;
             flex-wrap: wrap;
         }
-
         .skills-column {
             flex: 1;
             min-width: 250px;
         }
-
         .skills-column strong {
             display: block;
             font-size: 1.1rem;
             margin-bottom: 12px;
             color: #111111;
         }
-
         .skills-column ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-
         .skills-column li {
             padding: 6px 0;
             color: #444444;
@@ -88,7 +109,6 @@
             flex-direction: column;
             gap: 20px;
         }
-
         .project-card {
             background-color: #ffffff;
             padding: 30px;
@@ -104,15 +124,16 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
             border-color: #111111;
         }
-
         .project-card h3 {
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 1.3rem;
             font-weight: 700;
             color: #111111;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-
         .project-card p {
             margin-bottom: 0;
             font-size: 1rem;
@@ -124,7 +145,6 @@
             margin: 8px 0;
             font-size: 1.1rem;
         }
-
         .contact-info strong {
             color: #111111;
         }
@@ -135,7 +155,6 @@
             gap: 15px;
             margin-top: 20px;
         }
-
         .social-btn {
             display: inline-flex;
             align-items: center;
@@ -150,7 +169,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             transition: background-color 0.2s ease, border-color 0.2s ease;
         }
-
         .social-btn:hover {
             background-color: #111111;
             color: #ffffff;
@@ -162,8 +180,14 @@
 
     <!-- Heading Section -->
     <header>
-        <h1>SHADRACK APOLLO</h1>
-        <p style="font-size: 1.3rem; color: #666666; font-weight: 400; margin-top: 0;">Aspiring Software Developer & AI Builder</p>
+        <div class="header-text">
+            <h1>SHADRACK APOLLO</h1>
+            <p style="font-size: 1.3rem; color: #666666; font-weight: 400; margin-top: 0;">Aspiring Software Developer & AI Builder</p>
+        </div>
+        <div class="profile-img-container">
+            <!-- Ensure your image file is named profile.png and placed in the same folder -->
+            <img src="profile.png" alt="Shadrack Apollo Profile Picture">
+        </div>
     </header>
 
     <hr>
@@ -171,7 +195,7 @@
     <!-- About Me Section -->
     <section>
         <h2>About Me</h2>
-        <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p> 
+        <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p>
         <p>When I am not coding or experimenting with tech, you can usually find me gaming, animating movies, or diving into challenging puzzles. I am always excited to learn new skills, solve complex problems, and build creative projects that make an impact.</p>
     </section>
 
@@ -202,7 +226,6 @@
     <section>
         <h2>My Projects</h2>
         <div class="projects-container">
-            
             <!-- Project 1 -->
             <div class="project-card">
                 <h3>🚀 Student Data Management System</h3>
@@ -220,7 +243,6 @@
                 <h3>🤖 AI & Robotics Concept Lab</h3>
                 <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
             </div>
-
         </div>
     </section>
 
@@ -234,8 +256,8 @@
 
         <!-- Social Media Buttons -->
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/ajalla-shadrack-78436642a" target="_blank" class="social-btn">🔗 LinkedIn Profile</a>
-            <a href="https://github.com/SHAKAs-source" target="_blank" class="social-btn">🐙 GitHub Profile</a>
+            <a href="https://linkedin.com" target="_blank" class="social-btn">🔗 LinkedIn Profile</a>
+            <a href="https://github.com" target="_blank" class="social-btn">🐙 GitHub Profile</a>
         </div>
     </section>
 
