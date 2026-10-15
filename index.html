@@ -6,34 +6,15 @@
     <title>SHADRACK APOLLO - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        /* Base Page & Animated Mesh Background Styling */
+        /* Base Page Styling */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(125deg, #0f172a, #1e1b4b, #020617);
-            background-size: 400% 400%;
-            animation: meshGradient 15s ease infinite;
-            color: #f8fafc;
+            background-color: #0a0a0a;
+            color: #eeeeee;
             line-height: 1.6;
             padding: 60px 20px;
-            max-width: 800px;
+            max-width: 760px;
             margin: 0 auto;
-        }
-
-        @keyframes meshGradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Glassmorphism Section Container */
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
         /* Profile Layout Structure */
@@ -53,8 +34,8 @@
             height: 150px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid #6366f1;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
             flex-shrink: 0;
         }
         .profile-img-container img {
@@ -70,22 +51,19 @@
             letter-spacing: -0.03em;
             margin: 0 0 8px 0;
             color: #ffffff;
-            background: linear-gradient(to right, #ffffff, #a5b4fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
         h2 {
             font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: -0.01em;
             text-transform: uppercase;
-            color: #818cf8;
+            color: #aaaaaa;
             margin-top: 50px;
             margin-bottom: 20px;
         }
         p {
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: #cccccc;
             margin-bottom: 24px;
         }
 
@@ -93,7 +71,7 @@
         hr {
             border: 0;
             height: 1px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #222222;
             margin: 40px 0;
         }
 
@@ -119,9 +97,9 @@
             margin: 0;
         }
         .skills-column li {
-            padding: 8px 0;
-            color: #94a3b8;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 6px 0;
+            color: #bbbbbb;
+            border-bottom: 1px solid #222222;
             font-size: 1.05rem;
         }
 
@@ -132,18 +110,19 @@
             gap: 20px;
         }
         .project-card {
-            background-color: rgba(15, 23, 42, 0.6);
+            background-color: #121212;
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid #222222;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
         /* Project Card Hover Interactions */
         .project-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            border-color: #6366f1;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border-color: #ffffff;
         }
         .project-card h3 {
             margin-top: 0;
@@ -158,7 +137,7 @@
         .project-card p {
             margin-bottom: 0;
             font-size: 1rem;
-            color: #94a3b8;
+            color: #aaaaaa;
         }
 
         /* Contact Details */
@@ -180,22 +159,107 @@
             display: inline-flex;
             align-items: center;
             padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: #121212;
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background-color 0.2s ease, border-color 0.2s ease;
+            border: 1px solid #222222;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
         }
         .social-btn:hover {
-            background-color: #6366f1;
-            color: #ffffff;
-            border-color: #6366f1;
+            background-color: #ffffff;
+            color: #0a0a0a;
+            border-color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <!-- Wrap all inner elements inside the glass panel container -->
-    <div class="glass-panel">
+
+    <!-- Heading Section -->
+    <header>
+        <div class="header-text">
+            <h1>SHADRACK APOLLO</h1>
+            <p style="font-size: 1.3rem; color: #aaaaaa; font-weight: 400; margin-top: 0;">Aspiring Software Developer & AI Builder</p>
+        </div>
+        <div class="profile-img-container">
+            <!-- Ensure your image file is named profile.png and placed in the same folder -->
+            <img src="profile.png" alt="Shadrack Apollo Profile Picture">
+        </div>
+    </header>
+
+    <hr>
+
+    <!-- About Me Section -->
+    <section>
+        <h2>About Me</h2>
+        <p>I am an aspiring software developer, AI builder, web designer, and robotics enthusiast! I love bringing ideas to life, whether I am designing sleek websites or building intelligent applications.</p>
+        <p>When I am not coding or experimenting with tech, you can usually find me gaming, animating movies, or diving into challenging puzzles. I am always excited to learn new skills, solve complex problems, and build creative projects that make an impact.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skills-column">
+                <strong>💻 Technical & Development</strong>
+                <ul>
+                    <li>Web App Development (HTML/CSS)</li>
+                    <li>Git & GitHub Hosting</li>
+                    <li>Data Enumeration</li>
+                </ul>
+            </div>
+            <div class="skills-column">
+                <strong>🎨 Creative & Gaming</strong>
+                <ul>
+                    <li>Movie Animation & Keyframing</li>
+                    <li>3D Modeling & Visual Storytelling</li>
+                    <li>Video Editing & Compositing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>🚀 Student Data Management System</h3>
+                <p>A simple web-based student data management system designed to organize student information in a clear and easy-to-use interface. I built the project to strengthen my understanding of HTML, CSS, JavaScript, data handling, and user interface design.</p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>🎬 Cinematic Animation & Visual Storytelling</h3>
+                <p>A creative animation project exploring cinematic storytelling, character movement, visual effects, and scene composition. I experimented with AI-assisted animation and video editing tools to develop engaging short-form visual content while learning how different elements work together to create a complete scene.</p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>🤖 AI & Robotics Concept Lab</h3>
+                <p>An ongoing exploration of artificial intelligence, programming, and robotics concepts. I use small coding experiments and system designs to understand how intelligent systems can process information, make decisions, and interact with the world. This project represents my interest in combining software development with future robotics and AI technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Contact Section -->
+    <section class="contact-info">
+        <h2>Contact Me</h2>
+        <p>📧 Email: <strong>shadrachlane@gmail.com</strong></p>
+        <p>📞 Phone: <strong>0755654041 / 0776834853</strong></p>
+
+        <!-- Social Media Buttons -->
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" class="social-btn">🔗 LinkedIn Profile</a>
+            <a href="https://github.com" target="_blank" class="social-btn">🐙 GitHub Profile</a>
+        </div>
+    </section>
+
+</body>
+</html>
